@@ -16,7 +16,7 @@ function addLocales(webpackConfig) {
   if (webpackConfig.entry['antd.min']) {
     packageName += '.min';
   }
-  webpackConfig.entry[packageName] = './index-with-locales.js';
+  // webpackConfig.entry[packageName] = './index-with-locales.js';
   webpackConfig.output.filename = '[name].js';
 }
 
@@ -27,6 +27,7 @@ function externalMoment(config) {
     commonjs: 'moment',
     amd: 'moment',
   };
+  config.externals['@hi/core'] = true;
 }
 
 const webpackConfig = getWebpackConfig(false);

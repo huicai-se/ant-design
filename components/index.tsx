@@ -15,6 +15,7 @@ if (
   );
 }
 /* @remove-on-es-build-end */
+export { default as version } from './version';
 
 export { default as Affix } from './affix';
 
@@ -143,5 +144,3 @@ export { default as Typography } from './typography';
 export { default as Mention } from './mention';
 
 export { default as Upload } from './upload';
-
-export { default as version } from './version';
